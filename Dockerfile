@@ -1,4 +1,4 @@
-FROM node:13.10.1-alpine3.10
+FROM node:12-alpine
 
 ENV HOME=/app \
     NODE_ENV=development \

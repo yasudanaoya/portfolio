@@ -1,8 +1,15 @@
 <template lang="pug">
-  .container
+  .home-top
     a まだ決まってないよ
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'picky about',
+      titleTemplate: ''
+    }
+  }
+}
 </script>

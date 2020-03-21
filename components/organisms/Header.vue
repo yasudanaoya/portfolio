@@ -21,5 +21,6 @@ export default {
 .header {
   margin: 1vw 0;
   display: flex;
+  padding-bottom: 4vh;
 }
 </style>

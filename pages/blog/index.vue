@@ -1,19 +1,21 @@
 <template lang="pug">
   .blog-top
-    template
-      .blog-item(
+    .blog-items
+      blog-card(
         v-for="(post, index) in posts"
-        :key="post.id"
+        :key="index"
+        :post="post.fields"
       )
-        .blog-title
-          span {{ post.fields.title }}
-
 </template>
 
 <script>
 import client from '~/plugins/contentful'
+import BlogCard from '~/components/organisms/BlogCard'
 
 export default {
+  components: {
+    BlogCard
+  },
   async asyncData({ env }) {
     let posts = []
     await client
@@ -23,6 +25,17 @@ export default {
       })
       .then((res) => (posts = res.items))
     return { posts }
+  },
+  head() {
+    return {
+      title: 'blog'
+    }
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.blog-items {
+  display: flex;
+}
+</style>

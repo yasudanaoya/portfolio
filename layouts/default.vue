@@ -13,3 +13,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+body {
+  margin: 0;
+  .default {
+    margin: 2vh 15%;
+  }
+}
+</style>

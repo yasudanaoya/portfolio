@@ -1,26 +1,29 @@
 <template lang="pug">
   .blog-top
-    template(v-if="posts.lenght")
+    template
       .blog-item(
         v-for="(post, index) in posts"
         :key="post.id"
       )
         .blog-title
-          a {{ post.fields.title }}
+          span {{ post.fields.title }}
 
 </template>
 
 <script>
-// import client from '~/plugins/contentful'
+import { createClient } from '~/plugins/contentful.js'
 
-// export default {
-//   async asyncData({ env }) {
-//     let posts = []
-//     await client.getEntries({
-//       content_type: env.CTF_BLOG_POST_TYPE_ID,
-//       order: '-fields.publishDate'
-//     }).then(res => (posts = res.items)).catch(console.error)
-//     return { posts }
-//   }
-// }
+const client = createClient()
+export default {
+  asyncData({ env, params }) {
+    return client
+      .getEntries(env.CTF_BLOG_POST_TYPE_ID)
+      .then((entries) => {
+        return {
+          posts: entries.items
+        }
+      })
+      .catch(console.error)
+  }
+}
 </script>

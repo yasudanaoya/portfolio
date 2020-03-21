@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   mode: 'spa',
   /*
@@ -27,13 +29,15 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['plugins/contentful'],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/stylelint-module
+    '@nuxtjs/stylelint-module'
   ],
   /*
    ** Nuxt.js modules
@@ -45,6 +49,12 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
+  env: {
+    // contentful
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_BLOG_POST_TYPE_ID: process.env.CTF_BLOG_POST_TYPE_ID,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
+  },
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options

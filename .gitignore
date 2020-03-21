@@ -88,3 +88,8 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# history
+.ash_history
+.config/configstore/update-notifier-nodemon.json
+.config/configstore/nodemon.json

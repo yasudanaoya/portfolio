@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container
+  .home-top
     a まだ決まってないよ
 </template>
 

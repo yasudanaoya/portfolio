@@ -11,19 +11,18 @@
 </template>
 
 <script>
-import { createClient } from '~/plugins/contentful.js'
+import client from '~/plugins/contentful'
 
-const client = createClient()
 export default {
-  asyncData({ env, params }) {
-    return client
-      .getEntries(env.CTF_BLOG_POST_TYPE_ID)
-      .then((entries) => {
-        return {
-          posts: entries.items
-        }
+  async asyncData({ env }) {
+    let posts = []
+    await client
+      .getEntries({
+        content_type: env.CTF_BLOG_POST_TYPE_ID,
+        order: '-fields.publishedAt'
       })
-      .catch(console.error)
+      .then((res) => (posts = res.items))
+    return { posts }
   }
 }
 </script>

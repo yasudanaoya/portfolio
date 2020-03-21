@@ -1,12 +1,4 @@
-const { getConfigForKeys } = require('./lib/config.js')
-const ctfConfig = getConfigForKeys([
-  'CTF_BLOG_POST_TYPE_ID',
-  'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN'
-])
-
-const { createClient } = require('./plugins/contentful.js')
-const cdaClient = createClient(ctfConfig)
+require('dotenv').config()
 
 module.exports = {
   mode: 'spa',
@@ -37,7 +29,7 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: ['plugins/contentful'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -57,15 +49,6 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
-  generate: {
-    routes() {
-      return cdaClient
-        .getEntries(ctfConfig.CTF_BLOG_POST_TYPE_ID)
-        .then((entries) => {
-          return [...entries.items.map((entry) => `/blog/${entry.fields.slug}`)]
-        })
-    }
-  },
   env: {
     // contentful
     CTF_SPACE_ID: process.env.CTF_SPACE_ID,

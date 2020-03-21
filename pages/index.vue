@@ -4,5 +4,12 @@
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      title: 'picky about',
+      titleTemplate: ''
+    }
+  }
+}
 </script>

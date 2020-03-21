@@ -23,6 +23,11 @@ export default {
       })
       .then((res) => (posts = res.items))
     return { posts }
+  },
+  head() {
+    return {
+      title: 'blog'
+    }
   }
 }
 </script>

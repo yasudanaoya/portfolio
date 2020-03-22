@@ -24,6 +24,11 @@ export default {
   },
   mounted() {
     Prism.highlightAll()
+  },
+  head() {
+    return {
+      title: this.content.slug
+    }
   }
 }
 </script>

@@ -1,6 +1,8 @@
 <template lang="pug">
   .home-top
     a まだ決まってないよ
+    br
+    a というか Blog しか内容ないよ
 </template>
 
 <script>

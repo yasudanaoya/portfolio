@@ -2,9 +2,10 @@
   .blog-top
     .blog-items
       blog-card(
-        v-for="(post, index) in posts"
+        v-for="(content, index) in contents"
         :key="index"
-        :post="post.fields"
+        :index="index+1"
+        :content="content.fields"
       )
 </template>
 
@@ -17,14 +18,14 @@ export default {
     BlogCard
   },
   async asyncData({ env }) {
-    let posts = []
+    let contents = []
     await client
       .getEntries({
         content_type: env.CTF_BLOG_POST_TYPE_ID,
         order: '-fields.publishedAt'
       })
-      .then((res) => (posts = res.items))
-    return { posts }
+      .then((res) => (contents = res.items))
+    return { contents }
   },
   head() {
     return {

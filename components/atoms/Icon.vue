@@ -22,6 +22,7 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  height: 3.5vh;
+  height: 5vh;
+  margin: 0 0.5vw;
 }
 </style>

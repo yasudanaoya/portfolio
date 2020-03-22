@@ -1,30 +1,49 @@
 <template lang="pug">
   .blog-card
-    .blog-tags
-      span {{ getPostTags }}
-    .blog-img
-      img(
-        :src="post.image.fields.file.url"
-        :alt="post.image.fields.title"
+    nuxt-link(
+      :to="{name: 'blog-slug', params: { slug: content.slug }}"
+    )
+      .blog-tags(
+        v-if="isHaveTags"
       )
-    .blog-title
-      span {{ post.title }}
+        span {{ getContentTags }}
+      .blog-img
+        img(
+          :src="content.image.fields.file.url"
+          :alt="content.image.fields.title"
+        )
+      .blog-title
+        span {{ content.title }}
 </template>
 
 <script>
 export default {
   props: {
-    post: {
+    content: {
       type: Object,
+      required: true
+    },
+    index: {
+      type: Number,
       required: true
     }
   },
   computed: {
     /**
-     * tags が配列なので、文字列に変換して返却する
+     * タグを有するかのフラグ
+     *
+     * @return {boolean} 真偽値
      */
-    getPostTags() {
-      return this.post.tags.join(',')
+    isHaveTags() {
+      return this.content.tags
+    },
+    /**
+     * tags が配列なので、文字列に変換して返却する
+     *
+     * @return {string} タグ
+     */
+    getContentTags() {
+      return this.content.tags.join(',')
     }
   }
 }

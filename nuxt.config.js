@@ -49,9 +49,7 @@ module.exports = {
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
     // Doc: https://github.com/nuxt-community/modules/tree/master/packages/markdownit
-    '@nuxtjs/markdownit',
-    // Doc: https://github.com/Developmint/nuxt-svg-loader
-    'nuxt-svg-loader'
+    '@nuxtjs/markdownit'
   ],
   env: {
     // contentful

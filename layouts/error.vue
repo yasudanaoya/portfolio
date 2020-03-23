@@ -10,6 +10,12 @@
 import NotFoundImage from '~/assets/images/404.png'
 
 export default {
+  props: {
+    error: {
+      type: Object,
+      required: true
+    }
+  },
   data() {
     return {
       image: {

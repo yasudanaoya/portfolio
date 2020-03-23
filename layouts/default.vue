@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div.layout
     Header.full-width
     nuxt.default
     Footer.full-width
@@ -18,10 +18,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-body {
-  margin: 0;
+.layout {
+  // "body { margin: 8px }" がどうしても無効化できなかった
+  min-height: calc(100vh - 16px);
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
   .default {
     margin: 2vh 15%;
+    flex: 1;
   }
   .full-width {
     width: 100%;

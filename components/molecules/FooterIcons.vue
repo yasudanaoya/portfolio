@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Icon from '../atoms/icon'
+import Icon from '../atoms/Icon'
 
 // image
 import TwitterIcon from '~/assets/images/icon/twitter.png'

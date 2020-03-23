@@ -22,18 +22,6 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: { color: '#fff' },
-  /**
-   * Customize the vue-router
-   */
-  router: {
-    extendRoutes(routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '*',
-        component: resolve(__dirname, 'pages/error.vue')
-      })
-    }
-  },
   /*
    ** Global CSS
    */

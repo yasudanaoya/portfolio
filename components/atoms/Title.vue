@@ -8,5 +8,6 @@
 .logo-title {
   font-family: 'Gruppo', cursive;
   font-size: 5vh;
+  color: black;
 }
 </style>

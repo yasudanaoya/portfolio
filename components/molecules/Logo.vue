@@ -1,6 +1,9 @@
 <template lang="pug">
   .logo-frame
-    Title
+    nuxt-link(
+      to="/"
+    )
+      Title
 </template>
 
 <script>
@@ -16,5 +19,9 @@ export default {
 .logo-frame {
   margin: auto;
   white-space: nowrap;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+  }
 }
 </style>

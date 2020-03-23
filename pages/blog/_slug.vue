@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+/deep/ img {
   max-width: 80%;
 }
 </style>

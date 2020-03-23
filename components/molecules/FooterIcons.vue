@@ -14,6 +14,7 @@ import Icon from '../atoms/Icon'
 import TwitterIcon from '~/assets/images/icon/twitter.png'
 import FacebookIcon from '~/assets/images/icon/facebook.png'
 import GitHubIcon from '~/assets/images/icon/github.png'
+import QiitaIcon from '~/assets/images/icon/qiita.png'
 
 export default {
   components: {
@@ -26,7 +27,7 @@ export default {
         {
           src: TwitterIcon,
           href: 'https://twitter.com/708yasuda',
-          alt: 'twitter'
+          alt: 'Twitter'
         },
         {
           src: FacebookIcon,
@@ -37,6 +38,11 @@ export default {
           src: GitHubIcon,
           href: 'https://github.com/yasudanaoya',
           alt: 'GitHub'
+        },
+        {
+          src: QiitaIcon,
+          href: 'https://qiita.com/yasudanaoya',
+          alt: 'Qiita'
         }
       ]
     }

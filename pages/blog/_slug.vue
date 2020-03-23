@@ -1,6 +1,8 @@
 <template lang="pug">
   .blog-detail-top
-    span {{ content.title }}
+    .blog-title(
+      v-html="$md.render('# ' + content.title)"
+    )
     .blog-body(
       v-html="$md.render(content.body)"
     )
@@ -32,3 +34,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+img {
+  max-width: 80%;
+}
+</style>

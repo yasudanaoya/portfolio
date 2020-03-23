@@ -1,8 +1,8 @@
 <template lang="pug">
   .header
-    logo
+    logo.header-logo
 
-    header-menu
+    header-menu.header-menu
 </template>
 
 <script>
@@ -22,5 +22,11 @@ export default {
   margin: 1vw 0;
   display: flex;
   padding-bottom: 4vh;
+  .header-logo {
+    margin-left: 15%;
+  }
+  .header-menu {
+    margin-right: 15%;
+  }
 }
 </style>

@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       options: [
-        { title: 'blog', path: 'blog' },
+        { title: 'Blog', path: 'blog' },
         { title: 'Profile', path: 'profile' },
         { title: 'Home', path: '' }
       ]

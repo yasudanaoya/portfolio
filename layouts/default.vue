@@ -19,8 +19,7 @@ export default {
 
 <style lang="scss" scoped>
 .layout {
-  // "body { margin: 8px }" がどうしても無効化できなかった
-  min-height: calc(100vh - 16px);
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   overflow: hidden;

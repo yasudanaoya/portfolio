@@ -1,10 +1,12 @@
 <template lang="pug">
   .header-menu
-    header-menu-option(
+    .header-link(
       v-for="(option, index) in options"
       :key="index"
-      :option="option"
     )
+      header-menu-option(
+        :option="option"
+      )
 </template>
 
 <script>
@@ -31,5 +33,12 @@ export default {
 <style lang="scss" scoped>
 .header-menu {
   width: 100%;
+  .header-link {
+    text-align: center;
+    padding: 1vw;
+    display: table-cell;
+    vertical-align: middle;
+    float: right;
+  }
 }
 </style>

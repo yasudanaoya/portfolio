@@ -18,6 +18,7 @@ export default {
   data() {
     return {
       options: [
+        { title: 'Slide', path: 'slide' },
         { title: 'Blog', path: 'blog' },
         { title: 'Profile', path: 'profile' },
         { title: 'Home', path: '' }

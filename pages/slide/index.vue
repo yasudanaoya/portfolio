@@ -26,6 +26,11 @@ export default {
         { id: 'a68ef493957841459a1363c2471eed76' }
       ]
     }
+  },
+  head() {
+    return {
+      title: 'slide'
+    }
   }
 }
 </script>

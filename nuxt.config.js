@@ -2,6 +2,9 @@ require('dotenv').config()
 
 module.exports = {
   mode: 'spa',
+  generate: {
+    fallback: true
+  },
   /*
    ** Headers of the page
    */

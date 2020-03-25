@@ -22,6 +22,12 @@ export default {
         notFound: NotFoundImage
       }
     }
+  },
+  head() {
+    return {
+      title: 'Not Found',
+      titleTemplate: ''
+    }
   }
 }
 </script>

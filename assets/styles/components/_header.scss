@@ -1,0 +1,46 @@
+.header {
+  margin: 1vw 0;
+  display: flex;
+  padding-bottom: 4vh;
+
+  .header-left {
+    margin-left: 15%;
+
+    .logo-frame {
+      margin: auto;
+      white-space: nowrap;
+      text-decoration: none;
+
+      .logo-title {
+        font-family: $logo-font;
+        font-size: 5vh;
+        color: black;
+      }
+    }
+  }
+
+  .header-right {
+    right: 15%;
+    position: absolute;
+    display: flex;
+
+    .header-menu {
+      display: flex;
+
+      .header-link {
+        text-align: center;
+        padding: 1vw;
+        display: table-cell;
+        vertical-align: middle;
+        float: right;
+
+        span {
+          &:hover {
+            padding-bottom: 0.5vh;
+            border-bottom: solid thin;
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,12 +25,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.error-image {
-  text-align: center;
-  img {
-    height: 60vh;
-  }
-}
-</style>

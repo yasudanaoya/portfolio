@@ -17,12 +17,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-span {
-  &:hover {
-    padding-bottom: 0.5vh;
-    border-bottom: solid thin;
-  }
-}
-</style>

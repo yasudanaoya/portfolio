@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: $base-font;
+}
+
+span {
+  color: black;
+  font-family: $base-font;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+
+  .default {
+    margin: 2vh 15%;
+    flex: 1;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+}

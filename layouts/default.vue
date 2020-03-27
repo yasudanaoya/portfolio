@@ -16,19 +16,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.layout {
-  min-height: 100vh;
-  display: flex;
-  flex-flow: column;
-  overflow: hidden;
-  .default {
-    margin: 2vh 15%;
-    flex: 1;
-  }
-  .full-width {
-    width: 100%;
-  }
-}
-</style>

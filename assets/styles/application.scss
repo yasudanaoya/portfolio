@@ -1,14 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap');
-
-body {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-span {
-  color: black;
-  font-family: 'M PLUS 1p', sans-serif;
-}
+@import 'variable';
+@import 'base';
+@import 'components';

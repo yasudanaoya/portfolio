@@ -1,5 +1,5 @@
 <template lang="pug">
-  .header-menu
+  div
     .header-link(
       v-for="(option, index) in options"
       :key="index"
@@ -29,16 +29,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.header-menu {
-  width: 100%;
-  .header-link {
-    text-align: center;
-    padding: 1vw;
-    display: table-cell;
-    vertical-align: middle;
-    float: right;
-  }
-}
-</style>

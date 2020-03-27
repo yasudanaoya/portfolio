@@ -14,14 +14,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.logo-frame {
-  margin: auto;
-  white-space: nowrap;
-  text-decoration: none;
-  a {
-    text-decoration: none;
-  }
-}
-</style>

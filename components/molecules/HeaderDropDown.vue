@@ -1,3 +1,4 @@
 <template lang="pug">
-  a.logo-title picky about
+  .header-link
+    span Portfolio
 </template>

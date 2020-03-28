@@ -2,6 +2,7 @@
   margin: 1vw 0;
   display: flex;
   padding-bottom: 4vh;
+  justify-content: space-between;
 
   .header-left {
     margin-left: 15%;
@@ -20,8 +21,7 @@
   }
 
   .header-right {
-    right: 15%;
-    position: absolute;
+    margin-right: 15%;
     display: flex;
 
     .header-menu {
@@ -35,9 +35,27 @@
         float: right;
 
         span {
+          cursor: pointer;
+          font-size: 2.5vh;
+
           &:hover {
             padding-bottom: 0.5vh;
             border-bottom: solid thin;
+          }
+        }
+
+        .drop-down-menu {
+          position: absolute;
+          padding: 1vh 0;
+
+          .drop-down-link {
+            span {
+              font-size: 2.3vh;
+
+              &:hover {
+                padding-bottom: 0;
+              }
+            }
           }
         }
       }

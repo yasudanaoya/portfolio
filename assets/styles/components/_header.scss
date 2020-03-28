@@ -1,0 +1,64 @@
+.header {
+  margin: 1vw 0;
+  display: flex;
+  padding-bottom: 4vh;
+  justify-content: space-between;
+
+  .header-left {
+    margin-left: 15%;
+
+    .logo-frame {
+      margin: auto;
+      white-space: nowrap;
+      text-decoration: none;
+
+      .logo-title {
+        font-family: $logo-font;
+        font-size: 5vh;
+        color: black;
+      }
+    }
+  }
+
+  .header-right {
+    margin-right: 15%;
+    display: flex;
+
+    .header-menu {
+      display: flex;
+
+      .header-link {
+        text-align: center;
+        padding: 1vw;
+        display: table-cell;
+        vertical-align: middle;
+        float: right;
+
+        span {
+          cursor: pointer;
+          font-size: 2.5vh;
+
+          &:hover {
+            padding-bottom: 0.5vh;
+            border-bottom: solid thin;
+          }
+        }
+
+        .drop-down-menu {
+          position: absolute;
+          padding: 1vh 0;
+
+          .drop-down-link {
+            span {
+              font-size: 2.3vh;
+
+              &:hover {
+                padding-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

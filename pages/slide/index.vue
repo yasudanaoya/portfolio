@@ -34,10 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.embed-slide {
-  margin: 3vh 0;
-  width: 100%;
-}
-</style>

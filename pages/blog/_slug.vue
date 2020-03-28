@@ -34,9 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-/deep/ img {
-  max-width: 80%;
-}
-</style>

@@ -1,32 +1,25 @@
 <template lang="pug">
   .header
-    logo.header-logo
+    .header-left
+      logo
 
-    header-menu.header-menu
+    .header-right
+      .header-menu
+        header-menu
+
+        header-drop-down
 </template>
 
 <script>
 import Logo from '../molecules/Logo'
 import HeaderMenu from '../molecules/HeaderMenu'
+import HeaderDropDown from '../molecules/HeaderDropDown'
 
 export default {
   components: {
     Logo,
-    HeaderMenu
+    HeaderMenu,
+    HeaderDropDown
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.header {
-  margin: 1vw 0;
-  display: flex;
-  padding-bottom: 4vh;
-  .header-logo {
-    margin-left: 15%;
-  }
-  .header-menu {
-    margin-right: 15%;
-  }
-}
-</style>

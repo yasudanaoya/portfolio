@@ -1,10 +1,12 @@
 <template lang="pug">
-  .header-menu
-    header-menu-option(
+  div
+    .header-link(
       v-for="(option, index) in options"
       :key="index"
-      :option="option"
     )
+      header-menu-option(
+        :option="option"
+      )
 </template>
 
 <script>
@@ -18,8 +20,6 @@ export default {
   data() {
     return {
       options: [
-        { title: 'Slide', path: 'slide' },
-        { title: 'Blog', path: 'blog' },
         { title: 'Profile', path: 'profile' },
         { title: 'Home', path: '' }
       ]
@@ -27,9 +27,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.header-menu {
-  width: 100%;
-}
-</style>

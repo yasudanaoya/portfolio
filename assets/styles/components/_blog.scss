@@ -1,0 +1,44 @@
+.blog-top {
+  .blog-items {
+    display: flex;
+
+    .blog-card {
+      float: left;
+      margin: 2.5vh 2.5vw;
+      width: 50%;
+      border: 2px solid #000;
+      border-radius: 50px;
+
+      .blog-tags {
+        margin: 2vh 2vw;
+        padding: 0 2vw;
+        position: absolute;
+        border: 2px solid black;
+        border-radius: 50px;
+      }
+
+      .blog-img {
+        text-align: center;
+
+        img {
+          height: 25vh;
+          width: 100%;
+          border-radius: 50px;
+        }
+      }
+
+      .blog-title {
+        margin: 5%;
+      }
+    }
+  }
+}
+
+.blog-detail-top {
+  .blog-body {
+    /* stylelint-disable-next-line */
+    img {
+      max-width: 80%;
+    }
+  }
+}

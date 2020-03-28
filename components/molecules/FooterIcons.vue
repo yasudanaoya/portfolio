@@ -49,11 +49,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.footer-icons {
-  display: flex;
-  right: 15%;
-  position: absolute;
-}
-</style>

@@ -32,7 +32,7 @@ export default {
     /**
      * タグを有するかのフラグ
      *
-     * @return {boolean} 真偽値
+     * @returns {boolean} 真偽値
      */
     isHaveTags() {
       return this.content.tags
@@ -40,7 +40,7 @@ export default {
     /**
      * tags が配列なので、文字列に変換して返却する
      *
-     * @return {string} タグ
+     * @returns {string} タグ
      */
     getContentTags() {
       return this.content.tags.join(',')

@@ -2,12 +2,13 @@
   div
     .header-link
       span(
-        @click="onClick"
+        @mouseover="showMenu"
+        @mouseleave="hideMenu"
       ) Portfolio
-      drop-down-menu(
-        v-if="dropDownOpen"
-        @on-click="onClick"
-      )
+        drop-down-menu(
+          v-show="dropDownOpen"
+          @on-click="hideMenu"
+        )
 </template>
 
 <script>
@@ -22,8 +23,21 @@ export default {
     }
   },
   methods: {
-    onClick() {
-      this.dropDownOpen = !this.dropDownOpen
+    /**
+     * ドロップダウンメニューを開く
+     *
+     * @returns {void}
+     */
+    showMenu() {
+      this.dropDownOpen = true
+    },
+    /**
+     * ドロップダウンメニューを閉じる
+     *
+     * @returns {void}
+     */
+    hideMenu() {
+      this.dropDownOpen = false
     }
   }
 }

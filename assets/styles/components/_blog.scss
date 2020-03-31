@@ -1,11 +1,12 @@
 .blog-top {
   .blog-items {
     display: flex;
+    flex-wrap: wrap;
 
     .blog-card {
       float: left;
       margin: 2.5vh 2.5vw;
-      width: 50%;
+      width: 25%;
       border: 2px solid #000;
       border-radius: 50px;
 

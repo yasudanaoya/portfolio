@@ -19,7 +19,8 @@ export default {
     return {
       options: [
         { title: 'Blog', path: 'blog' },
-        { title: 'Slide', path: 'slide' }
+        { title: 'Slide', path: 'slide' },
+        { title: 'Apps', path: 'app' }
       ]
     }
   },

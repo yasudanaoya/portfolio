@@ -21,6 +21,10 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  // https://vue-meta.nuxtjs.org/api/#htmlattrs
+  htmlAttrs: {
+    lang: 'ja'
+  },
   /*
    ** Customize the progress-bar color
    */

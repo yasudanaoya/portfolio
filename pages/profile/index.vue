@@ -1,10 +1,15 @@
 <template lang="pug">
   .profile-top
-    span 自己紹介するよ
+    career
 </template>
 
 <script>
+import Career from '../../components/organisms/Career'
+
 export default {
+  components: {
+    Career
+  },
   head() {
     return {
       title: 'profile'
